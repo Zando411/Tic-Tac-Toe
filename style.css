@@ -76,12 +76,10 @@ svg {
 
 /* START */
 
-.game {
-}
-
-label,
-h1 {
-  color: var(--almond);
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .buttons {
@@ -90,7 +88,7 @@ h1 {
   gap: 1rem;
 }
 
-.game h1 {
+h1 {
   color: var(--almond);
   font-size: max(5vw, 2rem);
   text-align: center;
@@ -102,7 +100,7 @@ body {
 }
 
 #gameboard {
-  margin: 0 auto;
+  margin: 2vh auto;
   width: 600px;
   height: 600px;
   display: grid;
@@ -131,4 +129,8 @@ body {
 
 .cell:hover {
   background-color: #ddd;
+}
+
+#message {
+  color: var(--almond);
 }
