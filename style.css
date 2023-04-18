@@ -79,6 +79,11 @@ svg {
 .game {
 }
 
+label,
+h1 {
+  color: var(--almond);
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -96,7 +101,7 @@ body {
   background-color: var(--black);
 }
 
-.cells-grid {
+.board {
   margin: 0 auto;
   width: 600px;
   height: 600px;
