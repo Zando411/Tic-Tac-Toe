@@ -7,6 +7,10 @@ const Gameboard = (() => {
       boardHTML += `<div class="cell" id=square-${index}>${cell}</div>`;
     });
     document.querySelector('#gameboard').innerHTML = boardHTML;
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell) => {
+      cell.addEventListener('click', Game.handleClick);
+    });
   };
 
   return {
@@ -35,8 +39,14 @@ const Game = (() => {
     gameOver = false;
     Gameboard.render();
   };
+
+  const handleClick = (event) => {
+    let index = parseInt(event.target.id.split('-')[1]);
+    alert(index);
+  };
   return {
     start,
+    handleClick,
   };
 })();
 
