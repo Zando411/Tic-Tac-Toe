@@ -5,7 +5,7 @@
   --khaki: #c6ac8f;
   --walnut: #5e503f;
 
-  --border-size: 8px;
+  --border-size: 10px;
 }
 
 /* Box sizing rules */
@@ -112,7 +112,6 @@ body {
 .cell {
   cursor: pointer;
   color: var(--almond);
-  outline: var(--border-size) solid var(--almond);
   font-size: 180px;
   width: 200px;
   height: 200px;
@@ -122,26 +121,14 @@ body {
   text-align: center;
 }
 
-.ct-corner {
-  outline: var(--border-size) solid var(--almond);
-}
-
-.bl-corner {
-  border-top: var(--border-size) solid var(--almond);
+.cell:not(:nth-child(3n)) {
   border-right: var(--border-size) solid var(--almond);
 }
 
-.br-corner {
-  border-top: var(--border-size) solid var(--almond);
-  border-left: var(--border-size) solid var(--almond);
+.cell:not(#square-6, #square-7, #square-8) {
+  border-bottom: var(--border-size) solid var(--almond);
 }
 
-.tl-corner {
-  border-bottom: var(--border-size) solid var(--almond);
-  border-right: var(--border-size) solid var(--almond);
-}
-
-.tr-corner {
-  border-bottom: var(--border-size) solid var(--almond);
-  border-left: var(--border-size) solid var(--almond);
+.cell:hover {
+  background-color: #ddd;
 }
