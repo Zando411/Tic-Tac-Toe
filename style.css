@@ -101,7 +101,7 @@ body {
   background-color: var(--black);
 }
 
-.board {
+#gameboard {
   margin: 0 auto;
   width: 600px;
   height: 600px;
@@ -109,9 +109,10 @@ body {
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-.cells {
+.cell {
   cursor: pointer;
   color: var(--almond);
+  outline: var(--border-size) solid var(--almond);
   font-size: 180px;
   width: 200px;
   height: 200px;
